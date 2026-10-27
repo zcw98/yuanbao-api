@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>元宝API — 可用渠道</title>
+<meta name="description" content="元宝API 聚合网关控制台：可用渠道、API 密钥、用量记录与充值。">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="brand" href="#/dashboard"><span class="mark" aria-hidden="true"></span>元宝API</a>
+    <nav aria-label="主导航">
+      <ul class="nav-list" id="nav"></ul>
+    </nav>
+    <div class="side-foot">
+      <ul class="nav-list" id="nav-foot"></ul>
+    </div>
+  </aside>
+  <div class="col">
+    <header class="top">
+      <button class="icon-btn only-narrow" id="menu" aria-label="打开导航菜单" aria-expanded="false" aria-controls="side"><span aria-hidden="true">☰</span></button>
+      <div class="top-title">
+        <h1 id="page-title">可用渠道</h1>
+        <p class="sub" id="page-sub">查看您可访问的渠道与其支持的模型、定价</p>
+      </div>
+      <div class="top-actions">
+        <button class="btn" type="button" data-toast="暂无新公告">公告</button>
+        <a class="btn" href="#/docs">模型广场</a>
+        <button class="btn" type="button" data-toast="当前仅提供简体中文">🇨🇳 ZH</button>
+        <span class="chip" id="chip-keys" title="有效 API 密钥数量">0</span>
+        <span class="chip" id="chip-balance" title="账户余额">$0.00</span>
+        <details class="menu-wrap">
+          <summary class="user-btn"><span class="avatar" aria-hidden="true">YB</span><span class="user-name">yuanbao</span></summary>
+          <ul class="menu">
+            <li><a href="#/profile">个人资料</a></li>
+            <li><a href="#/keys">API 密钥</a></li>
+            <li><button type="button" data-action="logout">退出登录</button></li>
+          </ul>
+        </details>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div id="view"></div>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">此控制台需要启用 JavaScript 才能加载渠道、密钥与用量数据。</p></noscript>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
